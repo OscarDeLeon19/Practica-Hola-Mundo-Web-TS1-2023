@@ -1,0 +1,28 @@
+Estructuracion Practica Hola-Mundo Web
+
+	- Creacion del proyecto en Angular
+	- Estructurar Barra de navegacion y Rutas
+	- Pagina principal
+		- ¿Que es maiz?
+		- Origen del maiz
+		- Tipos de maiz
+	- Maiz en Guatemala
+		- Informacion de la situacion del maiz en guatemala
+		- Cultivo de maiz por departamentos
+		- Obstaculos (Enfermedades, fenomenos naturales, etc).
+	- Valor cultural del maiz en Guatemala
+	- Seccion de Reseñas
+		- Introducir Reseñas a Base de Datos (Nombre, correo, reseña, fecha)
+		- Mostrar reseñas
+	- Posible Seccion de preguntas
+		- Responder formulario de preguntas de seleccion multiple.
+		- Guardar informacion en BD.
+		- Mostrar puntuaciones
+
+Documentacion
+	- Investigacion de Maiz
+	- Investigacion de Tecnologias Utilizadas
+	- Pensamiento Sistemico
+
+Enlaces:
+	- https://www.icta.gob.gt/maiz
