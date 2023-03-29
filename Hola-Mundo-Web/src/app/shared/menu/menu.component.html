@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-link" *ngFor="let ruta of rutas" [routerLink]="ruta.ruta" routerLinkActive="active">
+                    {{ruta.nombre}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
