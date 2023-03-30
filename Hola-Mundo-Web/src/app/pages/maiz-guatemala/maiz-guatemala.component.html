@@ -1,1 +1,49 @@
-<p>maiz-guatemala works!</p>
+<div class="container">
+    <h1>Cultivo de maíz en Guatemala</h1>
+    <p>Es el grano básico de mayor consumo en Guatemala, la principal forma de consumo es “la tortilla” elaborada en los
+        hogares a partir del grano entero, siendo la base de la comida de la mayoría de las familias guatemaltecas,
+        consumiendo en promedio 114 kg por persona por año (2.5 quintales), sin embargo, este valor puede duplicarse y
+        en algunos casos hasta triplicarse dependiendo del ingreso económico de las familias. Durante el año 2017, se
+        sembraron en Guatemala 1,074,058 hectáreas con el cultivo de maíz, de las cuales se estimó una producción de
+        2,605,551 Toneladas Métricas.</p>
+    <p>
+        El maíz es un cultivo básico en la alimentación de la población guatemalteca, ya que se utiliza para preparar
+        alimentos tradicionales como las tortillas, el atol y los tamales. También es utilizado como alimento para
+        animales y como materia prima para la producción de bebidas alcohólicas como el chicha y la cerveza. El maíz se
+        cultiva principalmente en pequeñas y medianas fincas, donde se utilizan técnicas agrícolas tradicionales. Sin
+        embargo, en los últimos años, ha habido un impulso en la adopción de prácticas agrícolas más modernas, como el
+        uso de semillas mejoradas, la fertilización y el control de plagas y enfermedades.
+    </p>
+    <p>
+        En cuanto a las variedades de maíz cultivadas en Guatemala, existen muchas, desde las variedades criollas hasta
+        las variedades mejoradas. Las variedades criollas son las que se han cultivado tradicionalmente en el país,
+        mientras que las variedades mejoradas son las que han sido desarrolladas por instituciones de investigación y
+        empresas del sector privado para aumentar la productividad y la resistencia a enfermedades y plagas.
+    </p>
+    <p>La producción nacional se distribuye de la siguiente manera:</p>
+
+    <div class="row">
+        <div class="col-md-3">
+            <ul>
+                <li><span class="fw-bold">Peten: </span> 18% </li>
+                <li><span class="fw-bold">Alta Verapaz: </span> 10% </li>
+                <li><span class="fw-bold">Quiche: </span> 8% </li>
+                <li><span class="fw-bold">Jutiapa: </span> 7% </li>
+                <li><span class="fw-bold">Huehuetenango: </span> 6% </li>
+                <li><span class="fw-bold">San Marcos: </span> 5% </li>
+                <li><span class="fw-bold">Retalhuleu: </span> 5% </li>
+                <li><span class="fw-bold">Santa Rosa: </span> 5% </li>
+                <li><span class="fw-bold">Chimaltenango: </span> 4% </li>
+                <li><span class="fw-bold">Escuintla: </span> 4% </li>
+                <li><span class="fw-bold">Quetzaltenango: </span> 4% </li>
+                <li><span class="fw-bold">Resto: </span> 24% </li>
+            </ul>
+        </div>
+        <div class="grafica">
+            <div class="col">
+                <canvas baseChart class="chart" [data]="pieChartData" [type]="pieChartType" [options]="pieChartOptions">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>

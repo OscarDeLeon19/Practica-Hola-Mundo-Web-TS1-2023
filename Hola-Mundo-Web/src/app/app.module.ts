@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './shared/menu/menu.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { MaizGuatemalaComponent } from './pages/maiz-guatemala/maiz-guatemala.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MaizGuatemalaComponent } from './pages/maiz-guatemala/maiz-guatemala.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
