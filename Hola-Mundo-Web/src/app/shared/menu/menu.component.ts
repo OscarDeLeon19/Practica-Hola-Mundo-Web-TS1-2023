@@ -21,6 +21,10 @@ export class MenuComponent implements OnInit {
       nombre: "Maiz en Guatemala",
       ruta: '/maizGuatemala'
     },
+    {
+      nombre: "Valor cultural",
+      ruta: '/culturaMaiz'
+    }
   ]
 
   constructor() { }

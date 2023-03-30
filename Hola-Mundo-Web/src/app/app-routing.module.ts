@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CulturaMaizComponent } from './pages/cultura-maiz/cultura-maiz.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { MaizGuatemalaComponent } from './pages/maiz-guatemala/maiz-guatemala.component';
 
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'maizGuatemala',
     component: MaizGuatemalaComponent
+  }, 
+  {
+    path: 'culturaMaiz',
+    component: CulturaMaizComponent
   },
   {
     path: '**',
