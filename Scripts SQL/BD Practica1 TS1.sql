@@ -1,0 +1,22 @@
+CREATE SCHEMA practica1_ts1;
+
+USE practica1_ts1;
+
+CREATE TABLE Usuario (
+  idUsuario INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(50) NOT NULL,
+  correo VARCHAR(100) NOT NULL,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  password VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`idUsuario`));
+
+CREATE TABLE Reseña (
+  idReseña INT NOT NULL AUTO_INCREMENT,
+  idUsuario INT NOT NULL,
+  textoReseña TEXT NOT NULL,
+  fecha TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (idReseña),
+	FOREIGN KEY (idUsuario)
+    REFERENCES Usuario (idUsuario)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
