@@ -6,6 +6,7 @@ import { MaizGuatemalaComponent } from './pages/maiz-guatemala/maiz-guatemala.co
 import { ActividadComponent } from './pages/actividad/actividad.component';
 import { LoginComponent } from './components/login/login.component';
 import { CreateComponent } from './components/create/create.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'create',
     component: CreateComponent
+  },
+  {
+    path: 'updateUser',
+    component: UpdateUserComponent
   },
   {
     path: '**',

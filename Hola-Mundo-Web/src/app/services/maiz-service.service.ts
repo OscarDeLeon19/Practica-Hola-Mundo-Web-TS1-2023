@@ -21,4 +21,8 @@ export class MaizServiceService {
   guardarUsuario(user:User){
     return this.http.post(`${this.baseUrl}/agregarUsuario.php`,user);
   }
+
+  actualizarUsuario(user:any){
+    return this.http.put(`${this.baseUrl}/actualizarUsuario.php`,user);
+  }
 }

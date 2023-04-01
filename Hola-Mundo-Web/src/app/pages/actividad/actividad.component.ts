@@ -19,17 +19,15 @@ export class ActividadComponent implements OnInit {
       this.router.navigate(["/login"]);
     } else {
       this.usuario  = JSON.parse(user);
-      console.log(this.usuario);
     }
   }
 
   salir(){
-    console.log('g');
     localStorage.removeItem("user");
     this.router.navigate(["/login"]);
   }
 
   modificar(){
-    
+    this.router.navigate(["/updateUser"]);
   }
 }

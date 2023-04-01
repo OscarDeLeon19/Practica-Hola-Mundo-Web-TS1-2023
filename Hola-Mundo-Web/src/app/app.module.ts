@@ -12,6 +12,7 @@ import { ActividadComponent } from './pages/actividad/actividad.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateComponent } from './components/create/create.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CreateComponent } from './components/create/create.component';
     CulturaMaizComponent,
     ActividadComponent,
     LoginComponent,
-    CreateComponent
+    CreateComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

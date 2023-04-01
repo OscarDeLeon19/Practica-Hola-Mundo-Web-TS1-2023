@@ -1,0 +1,27 @@
+<div class="container border formulario">
+    <h3>Modifica tus datos</h3>
+    <form [formGroup]="miFormulario" (ngSubmit)="guardar()">
+        <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" placeholder="Nombre de Usuario" formControlName="nombre">
+            <span class="form-text text-danger" *ngIf="campoValido('nombre')">
+                Este campo es requerido. Maximo 50 caracteres
+            </span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Correo</label>
+            <input type="text" class="form-control" formControlName="correo">
+            <span class="form-text text-danger" *ngIf="campoValido('correo')">
+                Este campo es requerido. Maximo 100 caracteres y debe ser un email.
+            </span>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-primary">
+                    Actualizar
+                </button>
+                <button class="btn btn-primary float-end" (click)="salir()">Salir</button>
+            </div>
+        </div>
+    </form>
+</div>
