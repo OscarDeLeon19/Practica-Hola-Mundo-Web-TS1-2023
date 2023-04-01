@@ -24,6 +24,10 @@ export class MenuComponent implements OnInit {
     {
       nombre: "Valor cultural",
       ruta: '/culturaMaiz'
+    },
+    {
+      nombre: "Actividad",
+      ruta: '/actividad'
     }
   ]
 

@@ -1,4 +1,6 @@
 <?php
+    header("Access-Control-Allow-Origin: http://localhost:4200");
+
     if(!isset($_GET["username"]) && !isset($_GET["pass"])){
         exit("No hay parametros para la peticion");
     }

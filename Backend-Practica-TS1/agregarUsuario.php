@@ -1,4 +1,7 @@
 <?php
+    header("Access-Control-Allow-Origin: http://localhost:4200");
+    header("Access-Control-Allow-Headers: *");
+
 
     if($_SERVER["REQUEST_METHOD"] != "POST"){
         exit("Solo se aceptan peticiones post");
