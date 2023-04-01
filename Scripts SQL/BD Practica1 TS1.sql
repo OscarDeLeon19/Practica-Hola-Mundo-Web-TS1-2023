@@ -7,7 +7,7 @@ CREATE TABLE Usuario (
   nombre VARCHAR(50) NOT NULL,
   correo VARCHAR(100) NOT NULL,
   username VARCHAR(50) UNIQUE NOT NULL,
-  password VARCHAR(15) NOT NULL,
+  password VARCHAR(50) NOT NULL,
   PRIMARY KEY (`idUsuario`));
 
 CREATE TABLE Reseña (

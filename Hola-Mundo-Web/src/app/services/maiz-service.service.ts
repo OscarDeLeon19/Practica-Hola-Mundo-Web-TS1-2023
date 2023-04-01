@@ -13,4 +13,12 @@ export class MaizServiceService {
   obtenerUsuario(username: string, password: string) {
     return this.http.get(`${this.baseUrl}/obtenerUsuario.php?username=${username}&pass=${password}`);
   }
+
+  comprobarUsuario(username: string) {
+    return this.http.get(`${this.baseUrl}/comprobarUsuario.php?username=${username}`);
+  }
+
+  guardarUsuario(user:User){
+    return this.http.post(`${this.baseUrl}/agregarUsuario.php`,user);
+  }
 }

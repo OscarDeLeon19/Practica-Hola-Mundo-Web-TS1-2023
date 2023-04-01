@@ -29,4 +29,7 @@ export class ActividadComponent implements OnInit {
     this.router.navigate(["/login"]);
   }
 
+  modificar(){
+    
+  }
 }

@@ -11,6 +11,7 @@ import { CulturaMaizComponent } from './pages/cultura-maiz/cultura-maiz.componen
 import { ActividadComponent } from './pages/actividad/actividad.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateComponent } from './components/create/create.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     MaizGuatemalaComponent,
     CulturaMaizComponent,
     ActividadComponent,
-    LoginComponent
+    LoginComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

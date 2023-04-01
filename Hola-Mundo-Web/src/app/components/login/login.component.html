@@ -1,4 +1,5 @@
 <div class="container border formulario" >
+    <h3>Ingresa tus datos</h3>
     <form [formGroup]="miFormulario" (ngSubmit)="guardar()">
         <div class="mb-3">
             <label class="form-label">Username</label>
@@ -21,6 +22,9 @@
                 </button>
             </div>
         </div>
+        <span class="form-text text-primary">
+            <a routerLink='/create'>¿No tienes una cuenta?. Da click aqui</a>
+        </span>
     </form>
 </div>
 
