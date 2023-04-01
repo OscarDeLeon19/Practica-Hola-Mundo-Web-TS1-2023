@@ -4,7 +4,6 @@
     }
     $username = $_GET["username"];
     $pass = $_GET["pass"];
-    echo $pass;
     $bd = include_once "bd.php";
     $sentencia = $bd->prepare("SELECT * FROM Usuario WHERE username = ? AND password = ?");
     $sentencia->execute([$username, $pass]);
