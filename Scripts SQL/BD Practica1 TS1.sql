@@ -1,4 +1,4 @@
-CREATE SCHEMA practica1_ts1;
+/*CREATE SCHEMA practica1_ts1;
 
 USE practica1_ts1;
 
@@ -9,13 +9,13 @@ CREATE TABLE Usuario (
   username VARCHAR(50) UNIQUE NOT NULL,
   password VARCHAR(50) NOT NULL,
   PRIMARY KEY (`idUsuario`));
-
-CREATE TABLE Reseña (
-  idReseña INT NOT NULL AUTO_INCREMENT,
+*/
+CREATE TABLE Review (
+  idReview INT NOT NULL AUTO_INCREMENT,
   idUsuario INT NOT NULL,
-  textoReseña TEXT NOT NULL,
+  texto TEXT NOT NULL,
   fecha TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (idReseña),
+  PRIMARY KEY (idReview),
 	FOREIGN KEY (idUsuario)
     REFERENCES Usuario (idUsuario)
     ON DELETE CASCADE
