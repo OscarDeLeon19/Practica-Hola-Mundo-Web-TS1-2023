@@ -13,11 +13,12 @@
     }
     $bd = include_once "bd.php";
     $idUsuario = $jsonReview["idUsuario"];
+    $titulo = $jsonReview["titulo"];
     $texto = $jsonReview["texto"];
     $error = null;
     try {
-        $query = $bd->prepare("INSERT INTO Review (idUsuario, texto) VALUES (?,?)");
-        $resultado = $query->execute([$idUsuario, $texto]);
+        $query = $bd->prepare("INSERT INTO Review (idUsuario,titulo, texto) VALUES (?,?,?)");
+        $resultado = $query->execute([$idUsuario, $titulo, $texto]);
     } catch (Exception $e) {
         $resultado = false;
         $error = $e->getMessage();

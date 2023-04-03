@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateComponent } from './components/create/create.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { MenuUsuarioComponent } from './shared/menu-usuario/menu-usuario.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
     ActividadComponent,
     LoginComponent,
     CreateComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    MenuUsuarioComponent
   ],
   imports: [
     BrowserModule,

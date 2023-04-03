@@ -12,13 +12,14 @@
         exit("No se enviarion datos");
     }
 
+    $titulo = $jsonReview["titulo"];
     $texto = $jsonReview["texto"];
     $idReview = $jsonReview["idReview"];
     $error = null;
     $bd = include_once "bd.php";
     try {
-        $sentencia = $bd->prepare("UPDATE Review SET texto = ?, fecha = CURRENT_TIMESTAMP()  WHERE idReview = ?");
-        $resultado = $sentencia->execute([$texto, $idReview]);
+        $sentencia = $bd->prepare("UPDATE Review SET titulo = ?, texto = ?, fecha = CURRENT_TIMESTAMP()  WHERE idReview = ?");
+        $resultado = $sentencia->execute([$titulo, $texto, $idReview]);
     } catch (Exception $e) {
         $resultado = false;
         $error = $e->getMessage();

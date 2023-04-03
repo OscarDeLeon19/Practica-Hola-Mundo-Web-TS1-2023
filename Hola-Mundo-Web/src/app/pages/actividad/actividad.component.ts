@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from 'src/app/interfaces/Interfaces';
+import { Review, User } from 'src/app/interfaces/Interfaces';
+import { MaizServiceService } from 'src/app/services/maiz-service.service';
 
 @Component({
   selector: 'app-actividad',
@@ -9,25 +10,34 @@ import { User } from 'src/app/interfaces/Interfaces';
 })
 export class ActividadComponent implements OnInit {
 
-  usuario:User | undefined;
-  
-  constructor(private router: Router) { }
+  usuario: User | undefined;
+  reviews: Review[] = [];
+
+  constructor(private router: Router, private maizService: MaizServiceService) { }
 
   ngOnInit(): void {
     let user = localStorage.getItem("user");
     if (!user) {
       this.router.navigate(["/login"]);
     } else {
-      this.usuario  = JSON.parse(user);
+      this.usuario = JSON.parse(user);
+      this.verReviews();
     }
   }
 
-  salir(){
+  verReviews() {
+    this.maizService.verReviews()
+      .subscribe((valores:Review[]) => {
+        this.reviews = valores;
+      })
+  }
+
+  salir() {
     localStorage.removeItem("user");
     this.router.navigate(["/login"]);
   }
 
-  modificar(){
+  modificar() {
     this.router.navigate(["/updateUser"]);
   }
 }
