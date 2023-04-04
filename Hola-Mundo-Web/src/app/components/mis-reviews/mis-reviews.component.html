@@ -1,0 +1,28 @@
+<app-menu-usuario></app-menu-usuario>
+
+<div class="container">
+    <h1>Mis Reviews</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Texto</th>
+                <th scope="col">Fecha de Publicacion</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of reviews; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{item.titulo}}</td>
+                <td>{{item.texto}}</td>
+                <td>{{item.fecha}}</td>
+                <td>
+                    <a (click)="modificar(i)"> <i class="fas fa-marker"></i></a>
+                    <a (click)="eliminar(i)"> <i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -14,6 +14,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreateComponent } from './components/create/create.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { MenuUsuarioComponent } from './shared/menu-usuario/menu-usuario.component';
+import { AgregarReviewComponent } from './components/agregar-review/agregar-review.component';
+import { MisReviewsComponent } from './components/mis-reviews/mis-reviews.component';
+import { ModificarReviewComponent } from './components/modificar-review/modificar-review.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { MenuUsuarioComponent } from './shared/menu-usuario/menu-usuario.compone
     LoginComponent,
     CreateComponent,
     UpdateUserComponent,
-    MenuUsuarioComponent
+    MenuUsuarioComponent,
+    AgregarReviewComponent,
+    MisReviewsComponent,
+    ModificarReviewComponent
   ],
   imports: [
     BrowserModule,

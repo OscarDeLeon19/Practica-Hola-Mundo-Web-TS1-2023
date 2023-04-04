@@ -30,4 +30,11 @@ export class MenuUsuarioComponent implements OnInit {
     this.router.navigate(["/updateUser"]);
   }
 
+  agregar(){
+    this.router.navigate(["/agregarReview"]);
+  }
+  verMisReviews(){
+    this.router.navigate(["/misReviews"]);
+  }
+
 }

@@ -1,0 +1,30 @@
+<div class="container border formulario" >
+    <h3>Review</h3>
+    <form [formGroup]="miFormulario" (ngSubmit)="guardar()">
+        <div class="mb-3">
+            <label class="form-label">Titulo</label>
+            <input type="text" class="form-control" placeholder="Nombre de Usuario" formControlName="titulo">
+            <span class="form-text text-danger" *ngIf="campoValido('titulo')">
+                Debes llenar este campo
+            </span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Texto</label>
+            <textarea class="form-control" formControlName="texto" cols="30" rows="10"></textarea>
+            <span class="form-text text-danger" *ngIf="campoValido('texto')">
+                Debes llenar este campo
+            </span>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-primary">
+                    Modificar Review
+                </button>
+                <button  (click)="regresar()" type="button" class="btn btn-primary float-end">
+                    Regresar
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+

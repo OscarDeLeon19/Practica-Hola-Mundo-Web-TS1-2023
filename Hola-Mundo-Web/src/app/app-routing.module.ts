@@ -7,6 +7,9 @@ import { ActividadComponent } from './pages/actividad/actividad.component';
 import { LoginComponent } from './components/login/login.component';
 import { CreateComponent } from './components/create/create.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { AgregarReviewComponent } from './components/agregar-review/agregar-review.component';
+import { MisReviewsComponent } from './components/mis-reviews/mis-reviews.component';
+import { ModificarReviewComponent } from './components/modificar-review/modificar-review.component';
 
 const routes: Routes = [
   {
@@ -36,6 +39,18 @@ const routes: Routes = [
   {
     path: 'updateUser',
     component: UpdateUserComponent
+  },
+  {
+    path: 'agregarReview',
+    component: AgregarReviewComponent
+  },
+  {
+    path: 'misReviews',
+    component: MisReviewsComponent
+  },
+  {
+    path: 'modificarReview',
+    component: ModificarReviewComponent
   },
   {
     path: '**',

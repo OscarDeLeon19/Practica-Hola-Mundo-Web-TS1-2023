@@ -1,0 +1,32 @@
+<app-menu-usuario></app-menu-usuario>
+
+<div class="container border formulario" >
+    <h3>Agrega una review</h3>
+    <h5>Hablanos acerca de la importancia del maiz para ti, o haznos saber que te parecio la pagina :D</h5>
+    <form [formGroup]="miFormulario" (ngSubmit)="guardar()">
+        <div class="mb-3">
+            <label class="form-label">Titulo de la Review</label>
+            <input type="text" class="form-control" placeholder="Titulo de la review" formControlName="titulo">
+            <span class="form-text text-danger" *ngIf="campoValido('titulo')">
+                Debes llenar este campo
+            </span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Review</label>
+            <textarea class="form-control" formControlName="texto" cols="30" rows="10"></textarea>
+            <span class="form-text text-danger" *ngIf="campoValido('texto')">
+                Debes llenar este campo
+            </span>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-primary">
+                    Guardar Review
+                </button>
+                <button type="button" (click)="volver()" class="btn btn-primary float-end">
+                    Volver
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
