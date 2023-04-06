@@ -27,7 +27,16 @@ export class ActividadComponent implements OnInit {
       this.router.navigate(["/login"]);
     } else {
       this.usuario = JSON.parse(user);
-      this.verReviews();
+      this.maizService.comprobarUsuario(this.usuario!.username)
+        .subscribe((resultado: any) => {
+          if (resultado == false) {
+
+            localStorage.clear();
+            this.router.navigate(['/login'])
+          } else {
+            this.verReviews();
+          }
+        });
     }
   }
 
@@ -36,7 +45,7 @@ export class ActividadComponent implements OnInit {
    */
   verReviews() {
     this.maizService.verReviews()
-      .subscribe((valores:Review[]) => {
+      .subscribe((valores: Review[]) => {
         this.reviews = valores;
       })
   }

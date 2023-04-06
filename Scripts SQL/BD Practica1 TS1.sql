@@ -1,4 +1,4 @@
-/*CREATE SCHEMA practica1_ts1;
+CREATE SCHEMA practica1_ts1;
 
 USE practica1_ts1;
 
@@ -9,7 +9,7 @@ CREATE TABLE Usuario (
   username VARCHAR(50) UNIQUE NOT NULL,
   password VARCHAR(50) NOT NULL,
   PRIMARY KEY (`idUsuario`));
-*/
+
 CREATE TABLE Review (
   idReview INT NOT NULL AUTO_INCREMENT,
   idUsuario INT NOT NULL,
