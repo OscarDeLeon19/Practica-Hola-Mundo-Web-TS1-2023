@@ -12,14 +12,26 @@ import Swal from 'sweetalert2';
 })
 export class ModificarReviewComponent implements OnInit {
 
+  // La review que se va a modificar
   review?: Review;
 
+  // Formulario de los datos
   miFormulario: FormGroup = this.fb.group({
     titulo: ["", [Validators.required]],
     texto: ["", [Validators.required]]
   })
+
+  /**
+   * Constructor de la clase
+   * @param fb Creador de formularios
+   * @param maizService Servicio de la aplicacion
+   * @param router Propiedad que maneja las rutas
+   */
   constructor(private fb: FormBuilder, private maizService: MaizServiceService, private router: Router) { }
 
+  /**
+   * Obtiene la review del LocalStorage
+   */
   ngOnInit(): void {
     let review = localStorage.getItem("review");
     if (!review) {
@@ -30,11 +42,21 @@ export class ModificarReviewComponent implements OnInit {
     }
   }
 
+  /**
+   * Comprueba si un campo tiene errores
+   * @param campo El campo del formulario
+   * @returns Si hay errores
+   */
   campoValido(campo: string) {
     return this.miFormulario.controls[campo].errors
       && this.miFormulario.controls[campo].touched
   }
 
+  /**
+   * Obtiene los datos del formulario.
+   * Llama al servicio para modificar una review
+   * @returns 
+   */
   guardar() {
     if (this.miFormulario.invalid) {
       this.miFormulario.markAllAsTouched();
@@ -69,6 +91,9 @@ export class ModificarReviewComponent implements OnInit {
     }
   }
 
+  /**
+   * Navega a la pagina de mis Reviews
+   */
   regresar() {
     this.router.navigate(['/misReviews'])
   }

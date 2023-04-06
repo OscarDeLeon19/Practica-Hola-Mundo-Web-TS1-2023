@@ -1,3 +1,6 @@
+/**
+ * Interfaz del usuario
+ */
 export interface User {
   idUsuario: number
   nombre: string;
@@ -6,6 +9,9 @@ export interface User {
   password: string
 }
 
+/**
+ * Interfaz de una review
+ */
 export interface Review {
   idReview: number
   idUsuario: string;

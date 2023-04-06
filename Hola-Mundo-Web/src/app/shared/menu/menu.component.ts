@@ -12,6 +12,7 @@ interface Ruta{
 })
 export class MenuComponent implements OnInit {
 
+  // Arrego de rutas y nombres para el indice
   rutas: Ruta[] = [
     {
       nombre: "Inicio",

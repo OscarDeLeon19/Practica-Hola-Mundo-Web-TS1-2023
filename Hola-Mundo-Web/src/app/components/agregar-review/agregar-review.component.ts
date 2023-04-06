@@ -12,15 +12,27 @@ import Swal from 'sweetalert2';
 })
 export class AgregarReviewComponent implements OnInit {
 
+  // Variable del usuario de la aplicacion
   usuario: User | undefined;
-
+  
+  // Formulario para ingresar datos
   miFormulario: FormGroup = this.fb.group({
     titulo: ["", [Validators.required, Validators.maxLength(50)]],
     texto: ["", [Validators.required]]
   })
 
+  /**
+   * 
+   * @param fb Creador de formularis
+   * @param maizService Servicio de la aplicacion
+   * @param router Realiza acciones con los enlaces
+   */
   constructor(private fb: FormBuilder, private maizService: MaizServiceService, private router: Router) { }
 
+  /**
+   * Metodo ngOnInit
+   * Obtiene el usuario del localStorage
+   */
   ngOnInit(): void {
     let user = localStorage.getItem("user");
     if (!user) {
@@ -30,11 +42,21 @@ export class AgregarReviewComponent implements OnInit {
     }
   }
 
+  /**
+   * Comprueba que un campo sea valido
+   * @param campo El campo del formualrio
+   * @returns Si hay errores en el campo
+   */
   campoValido(campo: string) {
     return this.miFormulario.controls[campo].errors
       && this.miFormulario.controls[campo].touched
   }
 
+  /**
+   * Guarda la informacion de la review llamando al sevicio
+   * Si es invalido marca todos los campos
+   * @returns 
+   */
   guardar() {
     if (this.miFormulario.invalid) {
       this.miFormulario.markAllAsTouched();
@@ -68,6 +90,9 @@ export class AgregarReviewComponent implements OnInit {
     }
   }
 
+  /**
+   * Regresa a la pagina de actividad
+   */
   volver() {
     this.router.navigate(['/actividad']);
   }

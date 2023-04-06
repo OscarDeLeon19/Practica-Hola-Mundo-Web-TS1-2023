@@ -12,11 +12,22 @@ import Swal from 'sweetalert2';
 })
 export class MisReviewsComponent implements OnInit {
 
+  //Usuario de la aplicacion
   usuario: User | undefined;
+  // Reviews de la pagina
   reviews: Review[] = [];
 
+  /**
+   * Constructor de la clase
+   * @param fb Creador de formularios
+   * @param maizService Servicio de la aplicacion
+   * @param router Propiedad que maneja las rutas
+   */
   constructor(private fb: FormBuilder, private maizService: MaizServiceService, private router: Router) { }
 
+  /**
+   * Obtiene el usuario del LocalStorage
+   */
   ngOnInit(): void {
     let user = localStorage.getItem("user");
     if (!user) {
@@ -27,6 +38,11 @@ export class MisReviewsComponent implements OnInit {
     }
   }
 
+  /**
+   * Obtiene las reviews llamando al servicio
+   * El resultado de la peticion se muestra en pantalla.
+   * @param idUsuario El id del usuario
+   */
   obtenerReviews(idUsuario: any) {
     this.maizService.verReviewsPorId(idUsuario)
       .subscribe((resultados: Review[]) => {
@@ -34,6 +50,11 @@ export class MisReviewsComponent implements OnInit {
       });
   }
 
+  /**
+   * Guarda una review en el LocalStorage
+   * Navega a la pagina para modificar una review
+   * @param index El index de la review
+   */
   modificar(index: number) {
     let review = this.reviews[index];
     let jsonReview = JSON.stringify(review);
@@ -41,6 +62,12 @@ export class MisReviewsComponent implements OnInit {
     this.router.navigate(['/modificarReview'])
   }
 
+  /**
+   * Obtiene una review del arreglo
+   * Comprueba si se quiere eliminar la review
+   * Llama al servicio para eliminar una review
+   * @param index El index de la review
+   */
   eliminar(index: number) {
     let review = this.reviews[index];
     Swal.fire({

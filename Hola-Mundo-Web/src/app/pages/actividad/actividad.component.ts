@@ -10,11 +10,17 @@ import { MaizServiceService } from 'src/app/services/maiz-service.service';
 })
 export class ActividadComponent implements OnInit {
 
+  // Usuario de la aplicacion
   usuario: User | undefined;
+
+  // Reviews de la aplicacion
   reviews: Review[] = [];
 
   constructor(private router: Router, private maizService: MaizServiceService) { }
 
+  /**
+   * Obtiene el usuario del LocalStorage
+   */
   ngOnInit(): void {
     let user = localStorage.getItem("user");
     if (!user) {
@@ -25,6 +31,9 @@ export class ActividadComponent implements OnInit {
     }
   }
 
+  /**
+   * Obtiene las reviews del servicio de la aplicacion
+   */
   verReviews() {
     this.maizService.verReviews()
       .subscribe((valores:Review[]) => {
@@ -32,11 +41,17 @@ export class ActividadComponent implements OnInit {
       })
   }
 
+  /**
+   * Elimina el usuario de la aplicacion
+   */
   salir() {
     localStorage.removeItem("user");
     this.router.navigate(["/login"]);
   }
 
+  /**
+   * Navega a la ventana de actualizar usuario
+   */
   modificar() {
     this.router.navigate(["/updateUser"]);
   }

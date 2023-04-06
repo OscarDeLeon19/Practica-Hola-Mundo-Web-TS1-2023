@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 })
 export class CreateComponent implements OnInit {
 
+  // Formulario para ingresar los datos requeridos
   miFormulario: FormGroup = this.fb.group({
     nombre: ["", [Validators.required, Validators.maxLength(50)]],
     correo: ["", [Validators.required, Validators.maxLength(100), Validators.email]],
@@ -20,21 +21,39 @@ export class CreateComponent implements OnInit {
     confirm: ["", [Validators.required, Validators.minLength(6),]]
   })
 
+  /**
+   * Constructor de la clase
+   * @param fb Creador de formularios
+   * @param maizService Servicio de la aplicacion
+   * @param router Propiedad que maneja rutas
+   */
   constructor(private fb: FormBuilder, private maizService: MaizServiceService, private router: Router) { }
-
 
   ngOnInit(): void {
   }
 
+  /**
+   * Comprueba si un campo tiene errores
+   * @param campo El campo del formulario
+   * @returns Si hay errores en el campo
+   */
   campoValido(campo: string) {
     return this.miFormulario.controls[campo].errors
       && this.miFormulario.controls[campo].touched
   }
 
+  /**
+   * Metodo que comprueba si los campos de contraseña son iguales
+   * @returns Si los campos son iguales
+   */
   confirmarPassword() {
     return !(this.miFormulario.value.password === this.miFormulario.value.confirm)
   }
 
+  /**
+   * Obtiene las variables de los campos y llama al servicio para guardar un usuario
+   * @returns 
+   */
   guardar() {
     if (this.miFormulario.invalid) {
       Swal.fire({
