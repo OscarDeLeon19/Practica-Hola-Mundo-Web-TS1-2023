@@ -30,7 +30,6 @@ export class ActividadComponent implements OnInit {
       this.maizService.comprobarUsuario(this.usuario!.username)
         .subscribe((resultado: any) => {
           if (resultado == false) {
-
             localStorage.clear();
             this.router.navigate(['/login'])
           } else {

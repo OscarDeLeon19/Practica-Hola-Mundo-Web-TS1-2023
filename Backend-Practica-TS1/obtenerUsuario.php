@@ -11,7 +11,7 @@
     $pass = $_GET["pass"];
     // Realiza la query
     $bd = include_once "bd.php";
-    $sentencia = $bd->prepare("SELECT * FROM Usuario WHERE username = ? AND password = ?");
+    $sentencia = $bd->prepare("SELECT * FROM Usuario WHERE username = ? AND password = md5(?)");
     $sentencia->execute([$username, $pass]);
     $usuario = $sentencia->fetchObject();
     echo json_encode($usuario);

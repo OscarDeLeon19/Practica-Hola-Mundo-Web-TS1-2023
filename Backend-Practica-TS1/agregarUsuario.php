@@ -21,7 +21,7 @@
     $error = null;
     // Realiza la query en la base de datos
     try {
-        $query = $bd->prepare("INSERT INTO Usuario (nombre, correo, username, password) VALUES (?,?,?,?)");
+        $query = $bd->prepare("INSERT INTO Usuario (nombre, correo, username, password) VALUES (?,?,?,MD5(?))");
         $resultado = $query->execute([$nombre, $correo, $username, $password]);
     } catch (Exception $e) {
         $resultado = false;
