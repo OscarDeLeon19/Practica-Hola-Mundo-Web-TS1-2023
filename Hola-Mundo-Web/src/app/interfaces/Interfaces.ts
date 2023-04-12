@@ -19,3 +19,12 @@ export interface Review {
   texto: string;
   fecha: string;
 }
+/**
+ * Interfaz de una Puntuacion
+ */
+export interface Puntuacion {
+  idPuntuacion: number
+  idUsuario: string;
+  puntos: number;
+  fecha: string;
+}

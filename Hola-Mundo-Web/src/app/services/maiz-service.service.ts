@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Review, User } from '../interfaces/Interfaces';
+import { Puntuacion, Review, User } from '../interfaces/Interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -94,5 +94,13 @@ export class MaizServiceService {
    */
   modificarReview(review: any) {
     return this.http.put(`${this.baseUrl}/modificarReview.php`, review);
+  }
+
+  verPuntuaciones(idUsuaio: any) {
+    return this.http.get<Puntuacion[]>(`${this.baseUrl}/verPuntuaciones.php?idUsuario=${idUsuaio}`);
+  }
+
+  agregarPuntuacion(puntuacion: any) {
+    return this.http.post(`${this.baseUrl}/agregarPuntuacion.php`, puntuacion);
   }
 }

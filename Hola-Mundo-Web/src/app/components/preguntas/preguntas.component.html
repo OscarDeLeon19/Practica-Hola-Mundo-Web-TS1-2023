@@ -1,0 +1,405 @@
+<app-menu-usuario></app-menu-usuario>
+<div class="container border formulario m-2">
+    <h1>Juego de preguntas y Respuestas</h1>
+    <h3>Mira que tanto sabes acerca del maiz y su importancia</h3>
+    <form [formGroup]="miFormulario" (ngSubmit)="guardar()">
+        <!-- Pregunta No.1 -->
+        <label class="col-sm-3 col-form-label">
+            <h4>Pregunta No.1: </h4>
+        </label> <br>
+        <label class="col-sm-6 col-form-label">
+            <h5>¿A partir de que especie fue domesticado el maiz? </h5>
+        </label>
+        <div class="row mb-3 mx-3">
+            <div class="col-sm-9">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" formControlName="pr1"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Teocintle
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" formControlName="pr1"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Elote
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault2" formControlName="pr1"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Semillas
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="4" id="flexRadioDefault2" formControlName="pr1"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Granos
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Pregunta No.2 -->
+        <label class="col-sm-3 col-form-label">
+            <h4>Pregunta No.2: </h4>
+        </label> <br>
+        <label class="col-sm-6 col-form-label">
+            <h5>¿Cual es el maiz mas común? </h5>
+        </label>
+        <div class="row mb-3 mx-3">
+            <div class="col-sm-9">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" formControlName="pr2"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Maiz Amarillo
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" formControlName="pr2"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Mariz Morado
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault2" formControlName="pr2"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Maiz Blanco
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="4" id="flexRadioDefault2" formControlName="pr2"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Maiz Criollo
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Pregunta No.3 -->
+        <label class="col-sm-3 col-form-label">
+            <h4>Pregunta No.3: </h4>
+        </label> <br>
+        <label class="col-sm-6 col-form-label">
+            <h5>¿Cuantas toneladas de maiz se producen en el mundo? </h5>
+        </label>
+        <div class="row mb-3 mx-3">
+            <div class="col-sm-9">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" formControlName="pr3"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        500,000
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" formControlName="pr3"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        1,000,000
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault2" formControlName="pr3"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        600,000
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="4" id="flexRadioDefault2" formControlName="pr3"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        800,000
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Pregunta No.4 -->
+        <label class="col-sm-3 col-form-label">
+            <h4>Pregunta No.4: </h4>
+        </label> <br>
+        <label class="col-sm-6 col-form-label">
+            <h5>¿Como se llama la flor masculina de la planta de maiz?  </h5>
+        </label>
+        <div class="row mb-3 mx-3">
+            <div class="col-sm-9">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" formControlName="pr4"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Pelos
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" formControlName="pr4"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Estigma
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault2" formControlName="pr4"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Espiga
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="4" id="flexRadioDefault2" formControlName="pr4"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Fruto
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Pregunta No.5 -->
+        <label class="col-sm-3 col-form-label">
+            <h4>Pregunta No.5: </h4>
+        </label> <br>
+        <label class="col-sm-8 col-form-label">
+            <h5>¿Cual es el departamento que mas produce maiz a nivel nacional?  </h5>
+        </label>
+        <div class="row mb-3 mx-3">
+            <div class="col-sm-9">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" formControlName="pr5"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Quiche
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" formControlName="pr5"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Peten
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault2" formControlName="pr5"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Jutiapa
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="4" id="flexRadioDefault2" formControlName="pr5"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Quetzaltenango
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Pregunta No.6 -->
+        <label class="col-sm-3 col-form-label">
+            <h4>Pregunta No.6: </h4>
+        </label> <br>
+        <label class="col-sm-8 col-form-label">
+            <h5>¿Cuantos kilogramos de maiz consumen las familias guatemaltecas por año?  </h5>
+        </label>
+        <div class="row mb-3 mx-3">
+            <div class="col-sm-9">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" formControlName="pr6"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        75 kg
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" formControlName="pr6"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        200 kg
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault2" formControlName="pr6"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        150 kg
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="4" id="flexRadioDefault2" formControlName="pr6"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        114 kg
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Pregunta No.7 -->
+        <label class="col-sm-3 col-form-label">
+            <h4>Pregunta No.7: </h4>
+        </label> <br>
+        <label class="col-sm-8 col-form-label">
+            <h5>¿Que enfermedad fungica causa marchitamiento y muerte de la planta de maiz?  </h5>
+        </label>
+        <div class="row mb-3 mx-3">
+            <div class="col-sm-9">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" formControlName="pr7"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Fusarium
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" formControlName="pr7"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Roya Comun
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault2" formControlName="pr7"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Mildiú velloso
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="4" id="flexRadioDefault2" formControlName="pr7"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Tizón de maíz
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Pregunta No.8 -->
+        <label class="col-sm-3 col-form-label">
+            <h4>Pregunta No.8: </h4>
+        </label> <br>
+        <label class="col-sm-8 col-form-label">
+            <h5>¿Que dia se conmemora el maiz como Patrimonio Cultural Intangible de la Nación?  </h5>
+        </label>
+        <div class="row mb-3 mx-3">
+            <div class="col-sm-9">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" formControlName="pr8"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        15 de Septiembre
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" formControlName="pr8"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        26 de Agosto
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault2" formControlName="pr8"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        5 de Agosto
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="4" id="flexRadioDefault2" formControlName="pr8"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        13 de Agosto
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Pregunta No.9 -->
+        <label class="col-sm-3 col-form-label">
+            <h4>Pregunta No.9: </h4>
+        </label> <br>
+        <label class="col-sm-8 col-form-label">
+            <h5>¿Como se refieren los idiomas mayas al maiz?  </h5>
+        </label>
+        <div class="row mb-3 mx-3">
+            <div class="col-sm-9">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" formControlName="pr9"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Ktxu
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" formControlName="pr9"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Ixim
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault2" formControlName="pr9"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Paxil
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="4" id="flexRadioDefault2" formControlName="pr9"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Tzi
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Pregunta No.10 -->
+        <label class="col-sm-3 col-form-label">
+            <h4>Pregunta No.10: </h4>
+        </label> <br>
+        <label class="col-sm-8 col-form-label">
+            <h5>¿De que pais Guatemala importa mas maiz?  </h5>
+        </label>
+        <div class="row mb-3 mx-3">
+            <div class="col-sm-9">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" formControlName="pr10"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Estados Unidos
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" formControlName="pr10"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Mexico
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault2" formControlName="pr10"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Costa Rica
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="4" id="flexRadioDefault2" formControlName="pr10"
+                        required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Honduras
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Boton -->
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary" type="submit">
+                    Guardar
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

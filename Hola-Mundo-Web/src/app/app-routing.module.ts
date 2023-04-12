@@ -10,6 +10,8 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
 import { AgregarReviewComponent } from './components/agregar-review/agregar-review.component';
 import { MisReviewsComponent } from './components/mis-reviews/mis-reviews.component';
 import { ModificarReviewComponent } from './components/modificar-review/modificar-review.component';
+import { PreguntasComponent } from './components/preguntas/preguntas.component';
+import { TablaPuntuacionComponent } from './components/tabla-puntuacion/tabla-puntuacion.component';
 
 const routes: Routes = [
   {
@@ -51,6 +53,14 @@ const routes: Routes = [
   {
     path: 'modificarReview',
     component: ModificarReviewComponent
+  },
+  {
+    path: 'preguntas',
+    component: PreguntasComponent
+  },
+  {
+    path: 'tablaPuntuacion',
+    component: TablaPuntuacionComponent
   },
   {
     path: '**',

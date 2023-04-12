@@ -59,4 +59,8 @@ export class MenuUsuarioComponent implements OnInit {
     this.router.navigate(["/misReviews"]);
   }
 
+  verPreguntas(){
+    this.router.navigate(["/preguntas"]);
+  }
+
 }
