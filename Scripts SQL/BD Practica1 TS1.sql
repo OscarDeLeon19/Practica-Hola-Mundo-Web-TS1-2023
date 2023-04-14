@@ -1,3 +1,4 @@
+
 CREATE SCHEMA practica1_ts1;
 
 USE practica1_ts1;
@@ -17,6 +18,17 @@ CREATE TABLE Review (
   texto TEXT NOT NULL,
   fecha TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (idReview),
+	FOREIGN KEY (idUsuario)
+    REFERENCES Usuario (idUsuario)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+    
+CREATE TABLE Puntuacion (
+  idPuntuacion INT NOT NULL AUTO_INCREMENT,
+  idUsuario INT NOT NULL,
+  puntos INT NOT NULL,
+  fecha TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (idPuntuacion),
 	FOREIGN KEY (idUsuario)
     REFERENCES Usuario (idUsuario)
     ON DELETE CASCADE

@@ -1,5 +1,5 @@
 <?php
-    $password = "af5435269xdB";
+    $password = "";
     $usuario = "root";
     $nombre = "practica1_ts1";
     // Realiza la conexion con la base de datos
